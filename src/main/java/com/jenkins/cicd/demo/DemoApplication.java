@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoApplication {
     @GetMapping("/{name}")
 	public String greeting(@PathVariable String name){
+		name=name.split(" ")[0];
 		return "Hello "+ name +" Congratulation on successful completed demo";
 	}
 
