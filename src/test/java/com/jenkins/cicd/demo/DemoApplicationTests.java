@@ -19,7 +19,7 @@ class DemoApplicationTests {
 		String name="Syeda Sara";
 		mockmvc.perform(MockMvcRequestBuilders.get("/greetings/{name}",name))
 				.andExpect(MockMvcResultMatchers.status().isOk())
-				.andExpect(MockMvcResultMatchers.content().string("Hello "+name+" Congratulation on successful completed demo"));
+				.andExpect(MockMvcResultMatchers.content().string("Hello "+name.split(" ")[0]+" Congratulation on successful completed demo"));
 	}
 
 }
