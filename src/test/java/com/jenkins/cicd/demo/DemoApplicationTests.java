@@ -16,7 +16,7 @@ class DemoApplicationTests {
 
 	@Test
 	public void testGreetingEndpoints() throws Exception {
-		String name="Syeda Sara";
+		String name="Sara Syeda";
 		mockmvc.perform(MockMvcRequestBuilders.get("/greetings/{name}",name))
 				.andExpect(MockMvcResultMatchers.status().isOk())
 				.andExpect(MockMvcResultMatchers.content().string("Hello "+name.split(" ")[0]+" Congratulation on successful completed demo"));
